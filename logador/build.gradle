@@ -2,6 +2,30 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+ext {
+    bintrayRepo = project.name // Nome do repositório no Bintray
+    bintrayName = project.name // Nome do package no Bintray
+
+    publishedGroupId = 'br.com.braspag' // Group id (groupId:artifact:version // br.com.braspag:logado:1.0.0)
+    artifact = project.name // ArtifactId
+
+    libraryDescription = 'Esta library faz parte de uma documentação interna, favor ignorá-la'
+
+    siteUrl = 'https://github.com/Braspag/Logador'
+    gitUrl = 'https://github.com/Braspag/Logador.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'mauricifj'
+    developerName = 'Maurici Ferreira Junior'
+    developerEmail = 'm.f.j@hotmail.com'
+    developerUrl = "https://github.com/Mauricifj"
+
+    licenseName = 'MIT License'
+    licenseUrl = 'https://www.mit.edu/~amini/LICENSE.md'
+    allLicenses = ["MIT"]
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -22,7 +46,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
@@ -34,3 +57,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+
+apply from: 'publish.gradle'

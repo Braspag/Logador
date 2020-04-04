@@ -2,6 +2,8 @@ package br.com.braspag.logador
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import br.com.braspag.cieloecommerceoauth.network.Environment
+import br.com.braspag.cieloecommerceoauth.network.HttpCredentialsClient
 
 class MainActivity : AppCompatActivity() {
 

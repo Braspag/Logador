@@ -13,6 +13,12 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
+        // Bintray plugin
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4"
+
+        // Dokka plugin
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.10.1"
     }
 }
 
